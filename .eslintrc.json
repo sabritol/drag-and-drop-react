@@ -1,0 +1,45 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+      "prettier",
+      "react",
+      "jsx-a11y",
+      "testing-library",
+      "jest-dom",
+      "json"
+    ],
+    "extends": [
+      "prettier",
+      "prettier/prettier",
+      "plugin:prettier/recommended",
+      "react-app/jest",
+      "plugin:jest/recommended",
+      "plugin:jest-dom/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:testing-library/recommended",
+      "plugin:testing-library/react",
+      "plugin:react/recommended",
+      "eslint:recommended",
+      "plugin:json/recommended"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "jest": {
+        "version": "detect"
+      }
+    },
+    "rules": {
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
+    },
+    "globals": {
+      "process": true
+    },
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest/globals": true
+    }
+  }
