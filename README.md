@@ -44,7 +44,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 | Linting               | `stylelint`                         | The most famous CSS linter                                                                | [Website](https://stylelint.io/) |
 | Linting               | `stylelint-a11y`                    | Stylelint plugin for avoiding accessibility errors                                        | [GitHub](https://github.com/YozhikM/stylelint-a11y) |
 | Linting               | `stylelint-config-prettier`         | Stylelint plugin for disabling conflicting rules between prettier and Stylelint           | [GitHub](https://github.com/prettier/stylelint-config-prettier#readme) |
-| Linting               | `stylelint-config-recommended-scss` | Stylelint plugin that enables common SCSS linting rules                                   | [GitHub](https://github.com/kristerkari/stylelint-config-recommended-scss) |
 | Linting               | `stylelint-config-standard`        | Stylelint plugin that enables common CSS linting rules                                    | [GitHub](        
 
 ## Folders structure
