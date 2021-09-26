@@ -1,44 +1,65 @@
-# Getting Started with Create React App
+# Index of content
+
+- [Introduction](#introduction)
+    - [Learn more about create-react-app](#learn-more-about-create-react-app)
+- [Available scripts](#available-scripts)
+- [Dependencies and imposed libraries](#dependencies-and-imposed-libraries)
+- [Folders structure](#folders-structure)
+- [Global folder structure](#global-folder-structure)
+
+## Introduction
+A simple full stack application using React, Python and
+PostgresQL
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Command | Description | 
+|---|---|
+| `npm run start` | Runs the app in the development mode at [http://localhost:3000](http://localhost:3000). |
+| `npm run build` | Builds the app for production. [See doc](https://facebook.github.io/create-react-app/docs/deployment). |
+| `npm run eject` | **one way operation** for extending create react app functionalities [See doc](https://create-react-app.dev/docs/available-scripts/#npm-run-eject). |
+| `npm run prettier` | Fix every js, json or scss file accordingly to the linter using prettier |
+| `npm run prettier:js` | Fix only js files accordingly to the linter using prettier |
+| `npm run prettier:css` | Fix only css/scss files accordingly into the linter using prettier | 
+| `npm run lint:js` | Output on the console problems found into js files |
+| `npm run lint:css` | Output on the console problems found into css files |
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencies and imposed libraries
+| Area of interest      | Library code-name                   | Brief description                                                                         | Reference         | 
+| ---                   | ---                                 | ---                                                                                       | ---               |
+| Core                  | `prop-types`                        | Most famous React way to define components property shape                                 | [GitHub](https://github.com/facebook/prop-types) - [React Doc](https://reactjs.org/docs/typechecking-with-proptypes.html#gatsby-focus-wrapper)
+| Core                  | `framer-motion`                     | Strong library for building UI animation                                                  | [WebSite](https://www.framer.com/api/motion/)
+| Linting               | `prettier`                          | Code formatter that can be used with linters                                              | [Website](https://prettier.io/) |
+| Linting               | `eslint-plugin-react`               | ESLint plugin for enabling standard ReactJS linting rules                                 | [GitHub](https://github.com/yannickcr/eslint-plugin-react)
+| Linting               | `eslint`                            | Standard JS and TS linter                                                                 | [Website](https://eslint.org/docs/user-guide/configuring/) |
+| Linting               | `eslint-plugin-prettier`            | ESLint plugin for making prettier interacts with ESLint                                   | [GitHub](https://github.com/prettier/eslint-plugin-prettier)
+| Linting               | `eslint-config-prettier`            | ESLint plugin for disabling conflicting rules between prettier and ESLint                 | [GitHub](https://github.com/prettier/eslint-config-prettier) |
+| Linting               | `eslint-plugin-jest-dom`            | ESLint plugin for linting test written for Jest DOM                                       | [GitHub](https://github.github.com/testing-library/eslint-plugin-testing-library) |
+| Linting               | `eslint-plugin-json`                | ESLint plugin for writing good JSON files                                                 | [GitHub](https://github.com/azeemba/eslint-plugin-json#readme)
+| Linting               | `stylelint`                         | The most famous CSS linter                                                                | [Website](https://stylelint.io/) |
+| Linting               | `stylelint-a11y`                    | Stylelint plugin for avoiding accessibility errors                                        | [GitHub](https://github.com/YozhikM/stylelint-a11y) |
+| Linting               | `stylelint-config-prettier`         | Stylelint plugin for disabling conflicting rules between prettier and Stylelint           | [GitHub](https://github.com/prettier/stylelint-config-prettier#readme) |
+| Linting               | `stylelint-config-recommended-scss` | Stylelint plugin that enables common SCSS linting rules                                   | [GitHub](https://github.com/kristerkari/stylelint-config-recommended-scss) |
+| Linting               | `stylelint-config-standard`        | Stylelint plugin that enables common CSS linting rules                                    | [GitHub](        
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Folders structure
+The following application is built following the atomic design principle 
 
-### `npm test`
+## Global folder structure
+The global folder structure should appear as the follow:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
+| Folder path                                                         | Description                   |
+| ---                                                                 | ---                   |
+| `public/`                                                           | It must contain index.html and public files like which don't need to be processed                 | 
+| `src/molecules/CardDrag`                                                          | Section composed by a draggable card and a grid                |
+`                                                        | It must contain page components according to [component structure](#component-folder-structure), eg: `src/pages/Homepage`, `src/pages/Dashboard` | 
+| `src/pages/[MyPageComponent]/`                                      | It must contain components used only into `[MyPageComponent]`, according to [component structure](#component-folder-structure), eg:  `src/pages/Homepage/Headline`,  `src/pages/Homepage/IntroSection` |  
+| `src/test-utils/`                                                   | It must contain test utils according to [react-testing-library](https://testing-library.com/docs/react-native-testing-library/setup/#custom-render) recommendations |
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
