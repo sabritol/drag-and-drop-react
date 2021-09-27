@@ -19,6 +19,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 | Command | Description | 
 |---|---|
+| `npm ci` |Performs a clean installation of the dependencies  |
 | `npm run start` | Runs the app in the development mode at [http://localhost:3000](http://localhost:3000). |
 | `npm run build` | Builds the app for production. [See doc](https://facebook.github.io/create-react-app/docs/deployment). |
 | `npm run eject` | **one way operation** for extending create react app functionalities [See doc](https://create-react-app.dev/docs/available-scripts/#npm-run-eject). |
@@ -34,7 +35,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 | ---                   | ---                                 | ---                                                                                       | ---               |
 | Core                  | `prop-types`                        | Most famous React way to define components property shape                                 | [GitHub](https://github.com/facebook/prop-types) - [React Doc](https://reactjs.org/docs/typechecking-with-proptypes.html#gatsby-focus-wrapper)
 | Core                  | `framer-motion`                     | Strong library for building UI animation                                                  | [WebSite](https://www.framer.com/api/motion/)
-| Linting               | `prettier`                          | Code formatter that can be used with linters                                              | [Website](https://prettier.io/) |
+| Core                  | `@popmotion/popcorn`                     | Popcorn is a collection of utility functions for UI developers and animators.                                                | [WebSite](https://www.npmjs.com/package/@popmotion/popcorn)
+| Core                  | `array-move`                     | Strong library for building UI animation                                                  | [WebSite](https://www.npmjs.com/package/array-move)
+| Style                 | `styled-components`                     |  CSS-in-JS.                                                 | [WebSite](https://styled-components.com/)
+| Linting               | `prettier`                          | Code Utility to move an array item to a different position                                            | [Website](https://prettier.io/) |
 | Linting               | `eslint-plugin-react`               | ESLint plugin for enabling standard ReactJS linting rules                                 | [GitHub](https://github.com/yannickcr/eslint-plugin-react)
 | Linting               | `eslint`                            | Standard JS and TS linter                                                                 | [Website](https://eslint.org/docs/user-guide/configuring/) |
 | Linting               | `eslint-plugin-prettier`            | ESLint plugin for making prettier interacts with ESLint                                   | [GitHub](https://github.com/prettier/eslint-plugin-prettier)
@@ -56,9 +60,7 @@ The global folder structure should appear as the follow:
 | ---                                                                 | ---                   |
 | `public/`                                                           | It must contain index.html and public files like which don't need to be processed                 | 
 | `src/molecules/CardDrag`                                                          | Section composed by a draggable card and a grid                |
-`                                                        | It must contain page components according to [component structure](#component-folder-structure), eg: `src/pages/Homepage`, `src/pages/Dashboard` | 
-| `src/pages/[MyPageComponent]/`                                      | It must contain components used only into `[MyPageComponent]`, according to [component structure](#component-folder-structure), eg:  `src/pages/Homepage/Headline`,  `src/pages/Homepage/IntroSection` |  
-| `src/test-utils/`                                                   | It must contain test utils according to [react-testing-library](https://testing-library.com/docs/react-native-testing-library/setup/#custom-render) recommendations |
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
