@@ -1,4 +1,4 @@
-import CardDrag from "././molecules/CardDrag/CardDrag";
+import CardDrag from "./pages/CardDrag/CardDrag";
 
 function App() {
   return (
