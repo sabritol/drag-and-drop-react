@@ -4,7 +4,7 @@
 import PropTypes from "prop-types";
 import { useState, useEffect, useRef } from "react";
 import { useMotionValue } from "framer-motion";
-import { Card } from "./style";
+import { Card, Media } from "./style";
 // import data from "./db.json";
 
 /**
@@ -27,7 +27,7 @@ const flat = {
 };
 
 const DraggableCard = (props) => {
-  const { label, move, index, position, setPosition } = props;
+  const { label, move, index, position, setPosition, src, title } = props;
   const [isDragging, setIsDragging] = useState(false);
   const itemRef = useRef(null);
   const dragOriginX = useMotionValue(0);
@@ -83,7 +83,7 @@ const DraggableCard = (props) => {
         return !isDragging;
       }}
     >
-      <img src={props.image} alt={props.type} />
+      <Media src={src} alt={title} />
       <span style={{ textAlign: "center" }}>{label}</span>
       <span style={{ textAlign: "center" }}>X : {offsets.left}</span>
       <span style={{ textAlign: "center" }}>Y : {offsets.top}</span>
@@ -99,6 +99,8 @@ DraggableCard.propTypes = {
   position: PropTypes.object,
   image: PropTypes.string,
   type: PropTypes.string,
+  src: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default DraggableCard;

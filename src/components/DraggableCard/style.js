@@ -18,3 +18,11 @@ export const Card = styled(motion.div)`
   font-size: 20px;
   cursor: grab;
 `;
+export const Media = styled(motion.img)`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  background-color: lightsalmon;
+`;

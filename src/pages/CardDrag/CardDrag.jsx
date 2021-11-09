@@ -1,10 +1,11 @@
 // import PropTypes from "prop-types";
 import { useState, useCallback, useRef } from "react";
 import { clamp } from "@popmotion/popcorn";
+import { motion } from "framer-motion";
 import move from "array-move";
 // import { useMotionValue } from "framer-motion";
-import { Grid, Media } from "./styles";
-import cats from "./db.json";
+import { Grid } from "./styles";
+import cats from "./db";
 import DraggableCard from "../../components/DraggableCard/DraggableCard";
 
 const CardDrag = () => {
@@ -79,17 +80,9 @@ const CardDrag = () => {
             setPosition={setPosition}
             position={positions[i]}
           >
-            <span>
-              {cats.db.map((image, i) => (
-                <Media key={i}>
-                  {/* <img
-                    src={require(`${image.url}`)}
-                    alt={image.title}
-                    key={i}
-                  /> */}
-                </Media>
-              ))}
-            </span>
+            {cats.map((image, id) => (
+              <motion.img src={image.src} alt={image.title} key={id} />
+            ))}
           </DraggableCard>
         );
       })}
